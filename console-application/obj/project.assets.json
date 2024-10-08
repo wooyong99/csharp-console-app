@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "service-client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/service-client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/service-client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "service-client/1.0.0": {
+      "type": "project",
+      "path": "../../service-client/service-client/service-client.csproj",
+      "msbuildProject": "../../service-client/service-client/service-client.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "service-client >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\wulov\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\csharp-lab\\console-application\\console-application\\console-application.csproj",
+      "projectName": "console-application",
+      "projectPath": "D:\\csharp-lab\\console-application\\console-application\\console-application.csproj",
+      "packagesPath": "C:\\Users\\wulov\\.nuget\\packages\\",
+      "outputPath": "D:\\csharp-lab\\console-application\\console-application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\wulov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\csharp-lab\\service-client\\service-client\\service-client.csproj": {
+              "projectPath": "D:\\csharp-lab\\service-client\\service-client\\service-client.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
