@@ -16,3 +16,4 @@ D:\csharp-lab\console-application\console-application\bin\Debug\net8.0\service-c
 D:\csharp-lab\console-application\console-application\bin\Debug\net8.0\service-client.pdb
 D:\csharp-lab\console-application\console-application\obj\Debug\net8.0\console-application.csproj.AssemblyReference.cache
 D:\csharp-lab\console-application\console-application\obj\Debug\net8.0\console-.469769E8.Up2Date
+D:\csharp-lab\console-application\console-application\obj\Debug\net8.0\console-application.sourcelink.json

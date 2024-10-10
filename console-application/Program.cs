@@ -1,12 +1,15 @@
 ﻿using service_client;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 class Program
 {
+
     static async Task Main(string[] args)
     {
         using var httpClient = new HttpClient();
         MemberApi memberApi = new MemberApi(httpClient);
+        ImageApi imageApi = new ImageApi(httpClient);
         bool running = true;
 
         while (running)
@@ -17,7 +20,8 @@ class Program
             Console.WriteLine("3. 회원 수정");
             Console.WriteLine("4. 회원 삭제");
             Console.WriteLine("5. 전체 회원 조회");
-            Console.WriteLine("6. 종료");
+            Console.WriteLine("6. 이미지 저장");
+            Console.WriteLine("7. 종료");
             Console.Write("선택: ");
 
             string choice = Console.ReadLine();
@@ -117,10 +121,32 @@ class Program
                     break;
 
                 case "6":
+                    string filePath = @"D:\csharp-lab\test.jpg";
+
+                    if (!File.Exists(filePath))
+                    {
+                        Console.WriteLine("이미지를 찾을 수 없습니다");
+                    }
+
+                    // 파일이 존재할 때만 API 호출
+                    var postImageResponse = await imageApi.PostImageAsync(filePath);
+
+                    if (postImageResponse)
+                    {
+                        Console.WriteLine("이미지 업로드 성공");
+                    }
+                    else
+                    {
+                        Console.WriteLine("이미지 업로드 실패");
+                    }
+                    break;
+
+                case "7":
                     running = false;
                     Console.WriteLine("프로그램을 종료합니다.");
                     break;
 
+                
                 default:
                     Console.WriteLine("잘못된 선택입니다. 다시 시도하세요.");
                     break;

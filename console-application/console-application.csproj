@@ -11,5 +11,4 @@
   <ItemGroup>
     <ProjectReference Include="..\..\service-client\service-client\service-client.csproj" />
   </ItemGroup>
-
 </Project>
